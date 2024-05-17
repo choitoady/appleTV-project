@@ -1,100 +1,105 @@
 .presentation {
-    z-index: 1200;
-    position: absolute;
+  z-index: 1200;
+  position: absolute;
+}
+
+.wrapper_modal {
+  position: fixed;
+  /* top:0, left:0, right:0 과 동일 */
+
+  inset: 0px;
+  background-color: rgb(0 0 0 /71%);
+  display: flex;
+  justify-content: center;
+}
+
+.modal_box {
+  position: relative;
+  max-width: 800px;
+  background-color: #111;
+  overflow: hidden;
+  overflow-y: auto; /* 여기에서 auto로 변경해보세요 */
+  border-radius: 8px;
+  transform: all 400ms ease-in-out;
+  animation: fadeIn 400ms;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  max-height: 80vh; /* 뷰포트 높이의 80%로 설정 */
+}
+
+.modal_poster_img {
+  width: 100%;
+  height: auto;
+}
+
+.modal_close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  counter-reset: white;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.modal_content {
+  padding: 40px;
+}
+
+.modal_title {
+  padding: 0;
+  font-size: 40px;
+  max-width: 16px 0;
+}
+
+.modal_details {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.modal_overview {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
   }
-  
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-height: 768px) {
   .wrapper_modal {
-    position: fixed;
-    /* top:0, left:0, right:0 과 동일 */
-    inset: 0px;
-    background-color: rgb(0 0 0 /71%);
-    display: flex;
-    justify-content: center;
+    align-items: unset;
+    padding-top: 2rem;
   }
-  
-  .modal {
-    position: relative;
-    max-width: 800px;
-    background-color: #111;
-    overflow: hidden;
-    border-radius: 8px;
-    transform: all 400ms ease-in-out;
-    animation: fadeIn 400ms;
-  
+
+  .modal_box {
+    overflow-y: scroll !important;
   }
-  
-  .modal_poster_img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .modal_close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-    z-index: 1000;
-    counter-reset: white;
-  }
-  
-  .modal_content {
-    padding: 40px;
-  }
-  
-  .modal_title {
-    padding: 0;
-    font-size: 40px;
-    max-width: 16px 0;
-  }
-  
-  .modal_details {
-    font-weight: 600;
-    font-size: 18px;
-  }
-  
+}
+
+@media screen and (max-width: 768px) {
   .modal_overview {
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 16px;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-  
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+
+  .modal_details {
+    font-size: 16px;
   }
-  
-  @media screen and (max-height:768px) {
-    .wrapper_modal {
-      align-items: unset;
-      padding-top: 2rem;
-    }
-  
-    .modal {
-      overflow-y: scroll;
-    }
+
+  .wrapper_modal {
+    padding: 0;
   }
-  
-  @media screen and (max-width:768px) {
-    .modal_overview {
-      font-size: 16px;
-    }
-  
-    .modal_details {
-      font-size: 16px;
-    }
-  
-    .wrapper_modal {
-      padding: 0;
-    }
-  
-    .modal {
-      overflow-y: scroll !important;
-    }
-  
+
+  .modal_box {
+    overflow-y: scroll !important;
   }
+}
