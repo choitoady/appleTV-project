@@ -79,7 +79,7 @@
 
 .row__posters::-webkit-scrollbar {
   display: none;
-}   
+}
 /* 스크롤바 안보이게  */
 .row__poster {
   object-fit: contain;
