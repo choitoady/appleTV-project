@@ -27,7 +27,7 @@ const Nav = () => {
     navigate(`/search?q=${e.target.value}`);
   };
   return (
-    <NavWrapper show={show}>
+    <NavWrapper $show={show}>
       <Logo>
         <img
           alt="logo"
