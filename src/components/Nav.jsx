@@ -94,7 +94,9 @@ const Nav = () => {
 
       {pathname !== "/" && (
         <SignOut>
-          <UserImg src={userData.photoURL} alt={userData.displayName} />
+          {userData ? (
+            <UserImg src={userData.photoURL} alt={userData.displayName} />
+          ) : null}
           <DropDown>
             <span onClick={handleLogOut}>Sign Out</span>
           </DropDown>

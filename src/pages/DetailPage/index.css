@@ -1,0 +1,47 @@
+.detail__container {
+  position: relative;
+  display: block;
+  top: 70px;
+  padding: 0 calc(3.5vw + 5px);
+}
+.detail__container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%; /* 그라데이션 높이 조정 */
+
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+  backdrop-filter: blur(1px); /* 블러 효과 추가 */
+}
+
+.detail__img {
+  width: 100%; /* 화면 너비에 맞춰 이미지 크기 조정 */
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+.detail__description {
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+  color: white;
+  padding: 0 40px 70px 40px;
+  z-index: 1; /* 텍스트가 그라데이션 위에 표시되도록 z-index 설정 */
+  max-width: 70%;
+}
+.detail__additional-info {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #ddd;
+  display: flex;
+  gap: 20px;
+}
+.vote_average {
+  color: yellow;
+}
