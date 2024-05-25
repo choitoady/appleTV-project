@@ -17,7 +17,6 @@ const MovieModal = ({
 }) => {
   const ref = useRef(null);
 
-  
   useOnclickOutside(ref, () => {
     setModalOpen(false);
   });

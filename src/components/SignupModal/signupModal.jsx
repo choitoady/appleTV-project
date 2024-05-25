@@ -4,7 +4,7 @@
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useRef, useState } from "react";
 import styled from "styled-components";
-import useOnClickOutside from "../../hooks/useOnClickOutside";
+import useOnClickOutside from "../../hooks/useOnclickOutside";
 import "./signupModal.css";
 
 const SignUpModal = ({ setModalOpen }) => {
