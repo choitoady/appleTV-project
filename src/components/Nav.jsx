@@ -96,7 +96,9 @@ const Nav = () => {
         <SignOut>
           {userData ? (
             <UserImg src={userData.photoURL} alt={userData.displayName} />
-          ) : null}
+          ) : (
+            <UserImg src="/images/free-icon-person-7542670.png" alt="profile" />
+          )}
           <DropDown>
             <span onClick={handleLogOut}>Sign Out</span>
           </DropDown>
@@ -109,6 +111,8 @@ const UserImg = styled.img`
   border-radius: 50%;
   width: 100%;
   height: 100%;
+  background-color: ${({ hasUserData }) =>
+    hasUserData ? "transparent" : "ivory"};
 `;
 
 const DropDown = styled.div`

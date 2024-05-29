@@ -5,6 +5,7 @@ import DetailPage from "./pages/DetailPage";
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
 import SearchPage from "./pages/SearchPage";
+
 const Layout = () => {
   return (
     <>
