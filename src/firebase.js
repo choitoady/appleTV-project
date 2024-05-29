@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDhmjz30cxKDuNlzd1pB5OnJkwC4CRlXgo",
-  authDomain: "react-apple-tv-80650.firebaseapp.com",
-  projectId: "react-apple-tv-80650",
-  storageBucket: "react-apple-tv-80650.appspot.com",
-  messagingSenderId: "168705894176",
-  appId: "1:168705894176:web:c16fcd4e1533e0a057d945",
+  apiKey: "AIzaSyBkLRPXwCB78QsRb3dm3P4NqDF8P6Z4V-4",
+  authDomain: "react-appletv-app-9491e.firebaseapp.com",
+  projectId: "react-appletv-app-9491e",
+  storageBucket: "react-appletv-app-9491e.appspot.com",
+  messagingSenderId: "555195865242",
+  appId: "1:555195865242:web:e12a3591cd9fe98357e723",
 };
 
 // Initialize Firebase
