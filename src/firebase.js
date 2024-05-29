@@ -5,15 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBkLRPXwCB78QsRb3dm3P4NqDF8P6Z4V-4",
-  authDomain: "react-appletv-app-9491e.firebaseapp.com",
-  projectId: "react-appletv-app-9491e",
-  storageBucket: "react-appletv-app-9491e.appspot.com",
-  messagingSenderId: "555195865242",
-  appId: "1:555195865242:web:e12a3591cd9fe98357e723",
+  apiKey: "AIzaSyDOg7-_UobciioW6nKqxGgWdNc10xgBumw",
+  authDomain: "react-appletv.firebaseapp.com",
+  projectId: "react-appletv",
+  storageBucket: "react-appletv.appspot.com",
+  messagingSenderId: "256925762719",
+  appId: "1:256925762719:web:40751cb48f618a34738eaa",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 export default app;
