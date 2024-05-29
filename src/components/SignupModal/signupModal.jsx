@@ -58,9 +58,7 @@ const SignUpModal = ({ setModalOpen }) => {
           <FormContainer onSubmit={handleSignUp}>
             <Logo src="/images/apple-gray-logo.svg" alt="로고" />
             <HeadingText>Sign up</HeadingText>
-            <Description>
-              You will sign up for Apple TV and Apple Music.
-            </Description>
+            <Description>You will sign up for Apple TV.</Description>
             <Input
               type="email"
               placeholder="email"
