@@ -1,28 +1,40 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "../../api/axios";
+import instance from "../../api/axios";
 import { imageBasePath } from "../../components/constant";
 import "./index.css";
+
 const DetailPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(`/movie/${movieId}`);
-      setMovie(response.data);
+      try {
+        const response = await instance.get(`/movie/${movieId}`);
+        setMovie(response.data);
+      } catch (err) {
+        setError(err);
+        console.error("Error fetching movie data:", err);
+      }
     }
     fetchData();
   }, [movieId]);
-  console.log(movie);
-  if (!movie) return null;
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (!movie) return <div>Loading...</div>;
+
   const releaseYear = movie.release_date
     ? movie.release_date.split("-")[0]
     : "N/A";
-  // 각 객체의 name 속성을 추출한 배열 생성
-  const genreNames = movie.genres.map((genre) => genre.name);
 
-  // 배열을 '/'로 연결하여 문자열로 변환
+  const genreNames = movie.genres.map((genre) => genre.name);
   const result = genreNames.join("/");
+
   return (
     <section className="detail__container">
       <img
