@@ -33,6 +33,5 @@ React, css, StyleComponent, Axios, Firebase , Swiper
 1. Axios로 데이터를 주고받을 수 있게 되었습니다.
 2. 커스텀 hooks 에 대해 이해하게 되었습니다.
 3. firebase 를 통해 배포를 했습니다. 
-### 과정 기록
-<https://velog.io/@on_light/%ED%95%A9%EB%8F%99-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A5%BC-%ED%95%98%EB%8B%A4>
+
 
